@@ -1,26 +1,46 @@
-//Pages
-import { Box } from "@mui/material";
+//TODO review 
+import { Box, Typography } from "@mui/material";
+
+const Cards = ({ info }) => {
+
+const name = `Image Number: ${info.image_id}`
+let data = []
 
 
-//style
-import classes from './Cards.module.css';
+for (const key in info) {
+    if (Object.hasOwnProperty.call(info, key)) {
+      console.log(key + ": " + info[key]);
+      if(key != "image_id"){
+      data.push(<div  width="90%"><b>{key + ": "}</b>  {info[key]}</div>)
+     }
+    }
+    console.log(data.join(" "))
+  }
 
-function Cards (){
-    
-
-    
-    return (
-        <Box className={classes.outterBox}>
-            <Box className={classes.innerBox}>
-                <Box 
-                    sx={{ "&:hover": { cursor: "pointer" } }}
-                  >Drone Deploy</Box>
-                 <Box className={classes.icons}>
-            
-                </Box>
+    return(
+        <Box sx={{
+            margin: "5px 0px",
+            width:'70%',
+            bgcolor: 'rgba(255,255,255, 0.35)',
+            borderRadius: '2%',}}>
+            <Box
+            width="90%" margin="10px auto"
+            textAlign="left"
+            sx={{ fontWeight: 'bold',
+             }}
+            >
+            <Typography component="legend" variant="h5" >{name}</Typography>
+            </Box>
+            <Box
+            width="90%" margin="5px auto"
+            textAlign="left"
+            >
+            {data}
+            <hr/>
             </Box>
         </Box>
+    
     )
-};
+}
 
 export default Cards;

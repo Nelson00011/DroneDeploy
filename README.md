@@ -96,8 +96,9 @@ const items = await fetch(
 - [bcrypt.js](https://www.npmjs.com/package/bcryptjs) part of password hasing for user Authentification. 
 
 
-#### **style:** 
-- `frameworks and links associated`
+#### **helpful hints:** 
+- Object and list looping should always be checked first, common issue...
+- In the event of `ctl-s` going wrong check Grid numbers (max 12 in MUI)
 
 - Filler Text [typographic](https://generator.lorem-ipsum.info/)
     - Lorem Ipsum 
@@ -146,4 +147,8 @@ accurately.
 <!-- 
 ### TODO stx: 
 Future Structure (stx):
+- Table to display Data from Front End or Cards? 
+- Fetch all the data from the backend on the front end?
+- Filtering method for it?
+- Example would be ALL Data? 
 -->
