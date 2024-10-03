@@ -1,9 +1,9 @@
-<h1 align="center">projectsFULLSTACK</h1>
+<h1 align="center">Drone Data</h1>
 
 `main image`
 
 ## Description:
-Outline for general FULLSTACK DEVELOPMENT PROJECTs
+Drone Deploy Data with React.js application with Node.js backend that can be used to display Dummy Data. 
 
 ## Technology Stack
 - **Frontend/Client:** React.js, HTML5, CSS, framework, etc.
@@ -46,18 +46,28 @@ Outline for general FULLSTACK DEVELOPMENT PROJECTs
 > npm run start
 ```
 
-### Back-End Helpful Instructions `<examples below>`
-- Initial package.json & install dependencies:
-    - Must be `cd`'d into backend/server for install
+### Back-End Helpful Hints (Node.js)
+- confirm that config is up to date:
+
 ```
-> npx create-strapi-app@latest <project name>
-> cd <project name>
-> npm install --save stripe
+> node -v
+> npm -v
+> git --version
+> npm express -v 
 ```
-- Strapi Database generated (ctrl-c to exit):
+
+- Initial package.json & install dependencies (localhost:8080):
 ```
-> npm run develop
+> cd <backend name>
+> npm init -y
+> npm install express cors
 ```
+
+- In a separate terminal run
+```
+> npm start
+```
+
 - **Avoid** *npm run start* and use the `npm run develop`. 
 - Allow server to restart with each edit (see resources): 
     - **Content-Type Builder**: Item entry
