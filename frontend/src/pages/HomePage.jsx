@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 //pages
 import Cards from '../components/Cards';
 import TitleCard from '../components/TitleCard';
@@ -50,20 +50,30 @@ function HomePage() {
 
    
     //COMMENT: All Data Fetch Initial Page TODO pull data to front end
-    // async function getData() {
-    //   setDataDrone(true)
-    //   const items = await fetch(
-    //       `http://localhost:5000/api/data`,
-    //     { method: "GET" }
-    //   );
-    //   const itemsJSON = await items.json();
+    async function getData() {
+      
+       const data = await fetch(
+          `http://localhost:5000/api/data`,
+        { method: "GET",
+        }
+      );
 
-    //   setDataDrone(dataJSON.data);
-    //   console.log("TCL: getItem -> itemsJSON.data", itemsJSON.data)
-    //   // console.log("TCL: ItemsDetails -> item", item)
-    //   setLoadingData(false)
-    // }
+      console.log("TCL: getItem -> itemsJSON.data", data)
 
+      const dataJSON = await data.json();
+
+      // setDataDrone(dataJSON.data);
+      console.log("TCL: getItem -> itemsJSON.data", dataJSON)
+      // console.log("TCL: getItem -> itemsJSON.data", dataJSON[0])
+      // console.log(typeof(dataJSON[0]))
+      // console.log("TCL: ItemsDetails -> item", item)
+      // setLoadingData(false)
+    }
+ 
+    //COMMENT: Call BackEnd Data
+    useEffect(()=> {
+      getData();
+    }, [])
 
     //TODO: Apply Drone Filtering & link backend data
     const handleSubmit = (event) => {

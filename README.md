@@ -36,10 +36,7 @@ Drone Deploy Data with React.js application with Node.js backend that can be use
 > npx create-react-app <project name>
 > cd <project name>
 > npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
-> npm install --save react-router-dom
-> npm install react-redux @reduxjs/toolkit
-> npm install formik yup dotenv react-responsive-carousel
-> npm install --save @stripe/react-stripe-js @stripe/stripe-js
+> npm install cors
 ```
 - Test front-end once pages are generated (ctrl-c to exit):
 ```
@@ -61,6 +58,7 @@ Drone Deploy Data with React.js application with Node.js backend that can be use
 > cd <backend name>
 > npm init -y
 > npm install express cors
+> npm install -g nodemon
 ```
 
 - In a separate terminal run
@@ -73,21 +71,19 @@ Drone Deploy Data with React.js application with Node.js backend that can be use
     - **Content-Type Builder**: Item entry
     - **Media Library**: upload photos
     - **Permissions**: Settings > Roles > Public 
-- In frontend fetch `item` from backend (*localhost:1337*):
+- In frontend fetch `item` from backend (*localhost:5000*):
 ```
 const grouping = "items"
 const items = await fetch(
-`http://localhost:1337/api/${grouping}`
+`http://localhost:5000/api/${grouping}`
 )
 ```
---------------------------
-### Deployment
+<!-- --------------------------
+### Deployment -->
 
 --------------------------
-## Resources `<examples below>`
+## Resources & Requirements:
 
-- `Tech used and links associated`
-- `Tech used and links associated`
 
 `<examples below>`
 - **PostMan** for API Tests [here](https://www.postman.com/)
@@ -99,6 +95,10 @@ const items = await fetch(
 #### **helpful hints:** 
 - Object and list looping should always be checked first, common issue...
 - In the event of `ctl-s` going wrong check Grid numbers (max 12 in MUI)
+- issues with importing data
+```
+  "type": "module",
+  ```
 
 - Filler Text [typographic](https://generator.lorem-ipsum.info/)
     - Lorem Ipsum 

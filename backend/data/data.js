@@ -1,4 +1,5 @@
-[
+//COMMENT: droneflight dummy data
+const data = [
     {
     "image_id": "001",
     "timestamp": "2024-09-24 14:31:05",
@@ -117,3 +118,7 @@
     "image_tags": ["Thermal Pool", "Bacteria"]
     }
     ]
+
+
+   //COMMENT: export droneflight dummy data
+    export default data;

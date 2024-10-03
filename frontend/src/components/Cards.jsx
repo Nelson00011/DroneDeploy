@@ -9,12 +9,12 @@ let data = []
 
 for (const key in info) {
     if (Object.hasOwnProperty.call(info, key)) {
-      console.log(key + ": " + info[key]);
+      
       if(key != "image_id"){
       data.push(<div  width="90%"><b>{key + ": "}</b>  {info[key]}</div>)
      }
     }
-    console.log(data.join(" "))
+   data.join(" ")
   }
 
     return(
