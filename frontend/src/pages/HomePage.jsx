@@ -21,53 +21,45 @@ import Box from '@mui/material/Box';
 
 function HomePage() {
     const [input, setInput] = useState(false);
-    //TODO Test Data update
-    const [dataDrone, setDataDrone] = useState([{
-      "image_id": "003",
-      "timestamp": "2024-09-24 14:36:47",
-      "latitude": "44.4275° N",
-      "longitude": "110.5888° W",
-      "altitude_m": 100,
-      "heading_deg": 90,
-      "file_name": "YNP_003.jpg",
-      "camera_tilt_deg": 0,
-      "focal_length_mm": 50,
-      "iso": 400,
-      "shutter_speed": "1/2000",
-      "aperture": "f/5.6",
-      "color_temp_k": 5800,
-      "image_format": "RAW+JPEG",
-      "file_size_mb": 26.8,
-      "drone_speed_mps": 2.5,
-      "battery_level_pct": 91,
-      "gps_accuracy_m": 0.4,
-      "gimbal_mode": "Tripod",
-      "subject_detection": "Yes",
-      "image_tags": ["Wildlife", "Elk"]
-      }]);
+    //COMMENT: Data Pulled from Backend
+    const [dataDrone, setDataDrone] = useState([]);
+    //TODO: Filtering factor for data using Language Open AI
+    const [dataFilter, setDataFilter] = useState('');
+    
   
    
-    //COMMENT: All Data Fetch Initial Page TODO pull data to front end
+    //COMMENT: All Data Fetch Initial Page
     useEffect(() => {
       fetch('/api/data')
         .then(response => response.json())
         .then(data => {
-          //TEST: console.log(data[0]['image_id'])
           setDataDrone(data)
         }
       );
     }, []);
   
-    //TODO: Apply Drone Filtering & link backend data
+    //TODO: Add AI to filter the data:
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
+        setDataFilter(input)
+        //TODO test input confirmation with AI
         console.log({
           input: input,
         });
       };
 
-      //TODO: Make Cards with Filtered Drone Data
+    //TODO: Filter the Data
+    const applyFilter= () => {
+    
+
+    }
+    
+    //TODO: Make Cards with Filtered Drone Data
+    useEffect(() => {
+     applyFilter()
+    }, [dataFilter]);
+
   
     return (
          <Grid container component="main" sx={{ height: '100vh' }}>

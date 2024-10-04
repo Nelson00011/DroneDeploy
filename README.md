@@ -85,24 +85,33 @@ const items = await fetch(
 ## Resources & Requirements:
 
 
-`<examples below>`
-- **PostMan** for API Tests [here](https://www.postman.com/)
-    - jsonwebtoken / [jwt](https://jwt.io/) for Authentification & install [here](https://www.npmjs.com/package/jsonwebtoken)
-    - jwt Debugger [here](https://jwt.io/#debugger-io)
-- [bcrypt.js](https://www.npmjs.com/package/bcryptjs) part of password hasing for user Authentification. 
+- **Material UI* for design [here](https://mui.com/material-ui/)
 
+- **Open AI* for API [here](https://platform.openai.com/docs/overview)
+    - [node.js](https://platform.openai.com/docs/quickstart?context=node)
 
 #### **helpful hints:** 
 - Object and list looping should always be checked first, common issue...
 - In the event of `ctl-s` going wrong check Grid numbers (max 12 in MUI)
-- issues with importing data
+- issues with importing data, maybe fixed
 ```
   "type": "module",
   ```
 
-- Filler Text [typographic](https://generator.lorem-ipsum.info/)
+<!-- - Filler Text [typographic](https://generator.lorem-ipsum.info/)
     - Lorem Ipsum 
-- Google Fonts [here](https://fonts.google.com/)
+- Google Fonts [here](https://fonts.google.com/) -->
+
+
+
+
+<!-- 
+### TODO stx: 
+Future Structure (stx):
+- Table to display Data from Front End or Cards? 
+- Fetch all the data from the backend on the front end?
+- Filtering method for it?
+- Example would be ALL Data? 
 
 #### **requirements:** 
 Requirements:
@@ -143,12 +152,4 @@ Frontend: Clean UI/UX, input handling, and responsiveness.
 accurately.
 ● Overall: Code clarity, structure.
 
-
-<!-- 
-### TODO stx: 
-Future Structure (stx):
-- Table to display Data from Front End or Cards? 
-- Fetch all the data from the backend on the front end?
-- Filtering method for it?
-- Example would be ALL Data? 
 -->
