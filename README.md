@@ -21,7 +21,7 @@ Drone Deploy Data with React.js application with Node.js backend that can be use
 
 ## Run Code (Environment)
 
-### Front-End Instructions `<examples below>`
+### Front-End Instructions
 - confirm that config is appropriate:
 ```
 > node -v
