@@ -61,9 +61,12 @@ Drone Deploy Data with React.js application with Node.js backend that can be use
 > npm install -g nodemon
 ```
 
-- In a separate terminal run
+- In a separate terminal run this or the other command. 
 ```
 > npm start
+```
+```
+> node index.js
 ```
 
 - **Avoid** *npm run start* and use the `npm run develop`. 
