@@ -132,7 +132,7 @@ app.get('/api/hello', (req, res) => {
 });
 //basic data
 app.get('/api/data', (req, res) => {
-
+  console.log(data);
   res.json(data);
 });
 

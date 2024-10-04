@@ -45,36 +45,19 @@ function HomePage() {
       "subject_detection": "Yes",
       "image_tags": ["Wildlife", "Elk"]
       }]);
-      
-    // const [loadingData, setLoadingData] = useState(true);
-
+  
    
     //COMMENT: All Data Fetch Initial Page TODO pull data to front end
-    async function getData() {
-      
-       const data = await fetch(
-          `http://localhost:5000/api/data`,
-        { method: "GET",
+    useEffect(() => {
+      fetch('/api/data')
+        .then(response => response.json())
+        .then(data => {
+          //TEST: console.log(data[0]['image_id'])
+          setDataDrone(data)
         }
       );
-
-      console.log("TCL: getItem -> itemsJSON.data", data)
-
-      const dataJSON = await data.json();
-
-      // setDataDrone(dataJSON.data);
-      console.log("TCL: getItem -> itemsJSON.data", dataJSON)
-      // console.log("TCL: getItem -> itemsJSON.data", dataJSON[0])
-      // console.log(typeof(dataJSON[0]))
-      // console.log("TCL: ItemsDetails -> item", item)
-      // setLoadingData(false)
-    }
- 
-    //COMMENT: Call BackEnd Data
-    useEffect(()=> {
-      getData();
-    }, [])
-
+    }, []);
+  
     //TODO: Apply Drone Filtering & link backend data
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -95,7 +78,7 @@ function HomePage() {
             sm={4}
             md={8}
             sx={{
-              backgroundImage: 'url(https://media.istockphoto.com/id/537241730/photo/up-view-in-financial-district.jpg?s=1024x1024&w=is&k=20&c=T9Rt8TyQsoqi8rqfvKJ7DszNWPYU807_hLtid90Drdk=)',
+              backgroundImage: 'url(https://as1.ftcdn.net/v2/jpg/00/52/14/94/1000_F_52149427_zpSBvXruuUbDlrWvrF3d4Z8Pp83OI788.jpg)',
               backgroundRepeat: 'no-repeat',
               backgroundColor: (t) =>
                 t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -114,15 +97,9 @@ function HomePage() {
               
                 {/* COMMENT: Title Card */}
                 <TitleCard title="Drone Data Below" />
-                <Cards info={dataDrone[0]}/>
-                <Cards info={dataDrone[0]}/>
-            
                 {/* COMMENT: Cycle Through Drone Data*/}
-              
-            </Box>
-              
-             
-             
+                {dataDrone && dataDrone.map(item => (<Cards info={item}/>))}
+              </Box>
             </Grid>
         
         
