@@ -6,18 +6,18 @@
 Drone Deploy Data with React.js application with Node.js backend that can be used to display Dummy Data. 
 
 ## Technology Stack
-- **Frontend/Client:** React.js, HTML5, CSS, framework, etc.
-- **API:** api calls or external sources used
-- **Backend/Server:** node.js/express or python alternatives, include databases
+- **Frontend/Client:** React.js, HTML5, CSS, etc..
+- **API:** Open AI - TBD
+- **Backend/Server:** node.js/express, dummy data
 
-## Screen Shots:
+<!-- ## Screen Shots:
 <p align="center">Please reference the screenshot folder for more available images</p>
 
 `selected image 1`
 
 `selected image 2`
 
-`selected image 3`
+`selected image 3` -->
 
 ## Run Code (Environment)
 
